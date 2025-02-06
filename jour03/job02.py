@@ -22,8 +22,6 @@ class CompteBancaire:
         if montant > 0:
             self.__solde += montant
             print(f"Vous avez versé {montant} EUR sur votre compte.")
-        else:
-            print("Le montant du versement doit être positif.")
 
     def retrait(self, montant):
         """Effectue un retrait du compte"""
@@ -31,9 +29,6 @@ class CompteBancaire:
             print("Le montant du retrait doit être positif.")
         elif self.__solde - montant < 0 and not self.__decouvert:
             print("Erreur : Solde insuffisant et découvert non autorisé.")
-        else:
-            self.__solde -= montant
-            print(f"Vous avez retiré {montant} EUR. Nouveau solde: {self.__solde} EUR.")
 
     def agios(self):
         """Applique des agios si le solde est négatif"""
