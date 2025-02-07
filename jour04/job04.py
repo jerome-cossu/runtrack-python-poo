@@ -11,5 +11,3 @@ class Rectangle(Forme):
 
 rectangle1 = Rectangle(5, 3)
 print("L'aire du rectangle est de", rectangle1.aire())
-    
-        
