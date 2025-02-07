@@ -14,6 +14,8 @@ class Voiture(Vehicule):
     def informationsVehicule(self):
         super().informationsVehicule()
         print(f"Nombre de portes: {self.portes}")
+    def demarrer(self):
+        print("La voiture démarre")
 
 class Moto(Vehicule):
     def __init__(self, marque, modele, annee, prix):
@@ -22,9 +24,13 @@ class Moto(Vehicule):
     def informationsVehicule(self):
         super().informationsVehicule()
         print(f"Nombre de roues: {self.roues}")
+    def demarrer(self):
+        print("La moto démarre")
 
 voiture1 = Voiture("Peugeot", "208", 2020, 65000)
 voiture1.informationsVehicule()
-
+voiture1.demarrer()
 moto1 = Moto("Yamaha", "MT-07", 2019, 8000)
 moto1.informationsVehicule()
+moto1.demarrer()
+
